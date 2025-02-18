@@ -6,7 +6,7 @@
 /*   By: imouhtad <imouhtad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 20:26:15 by imouhtad          #+#    #+#             */
-/*   Updated: 2025/02/18 17:15:18 by imouhtad         ###   ########.fr       */
+/*   Updated: 2025/02/19 00:44:11 by imouhtad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,9 @@
 void	isometric(t_fdf *fdf, t_point *points)
 {
 	int		i;
-	int		j;
 	float	prev_x;
 
 	i = 0;
-	j = 0;
 	prev_x = points->x;
 	points->z /= 10;
 	points->z *= fdf->z_move;

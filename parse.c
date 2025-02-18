@@ -6,7 +6,7 @@
 /*   By: imouhtad <imouhtad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 16:59:05 by imouhtad          #+#    #+#             */
-/*   Updated: 2025/02/18 17:11:13 by imouhtad         ###   ########.fr       */
+/*   Updated: 2025/02/19 00:43:43 by imouhtad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@
 int	is_number(char *str)
 {
 	int	i;
-	int	minus;
 
-	minus = 1;
 	i = 0;
 	if (!str || str[i] == ',')
 		return (0);
@@ -103,5 +101,5 @@ t_point	**fill_points(t_fdf *fdf)
 			return (close(fd), free_points(points, i + 1), NULL);
 		i++;
 	}
-	return (close(fd), points);
+	return (get_next_line(fd), close(fd), points);
 }

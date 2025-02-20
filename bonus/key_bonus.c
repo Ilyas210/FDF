@@ -6,11 +6,11 @@
 /*   By: imouhtad <imouhtad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 16:52:45 by imouhtad          #+#    #+#             */
-/*   Updated: 2025/02/18 16:09:15 by imouhtad         ###   ########.fr       */
+/*   Updated: 2025/02/20 22:16:04 by imouhtad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
+#include "fdf_bonus.h"
 
 void	move_coordinates(mlx_key_data_t keydata, t_fdf	*fdf)
 {
@@ -43,9 +43,9 @@ void	key_hook(mlx_key_data_t keydata, void *param)
 	if (keydata.key == 256 && keydata.action == MLX_PRESS)
 		mlx_clear(fdf);
 	if (keydata.key == 82 && keydata.action == MLX_PRESS && fdf->iso)
-		fdf->angle += M_PI / 180;
+		fdf->angle += 1;
 	if (keydata.key == 80 && keydata.action == MLX_PRESS && fdf->iso)
-		fdf->angle -= M_PI / 180;
+		fdf->angle -= 1;
 	move_coordinates(keydata, fdf);
 	redraw_map(fdf, fdf->points);
 }

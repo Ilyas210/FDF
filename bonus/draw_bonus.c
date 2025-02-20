@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   draw.c                                             :+:      :+:    :+:   */
+/*   draw_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imouhtad <imouhtad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 20:26:15 by imouhtad          #+#    #+#             */
-/*   Updated: 2025/02/20 01:34:16 by imouhtad         ###   ########.fr       */
+/*   Updated: 2025/02/20 01:38:58 by imouhtad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
-#include "error_message.h"
+#include "fdf_bonus.h"
+#include "../error_message.h"
 
 void	isometric(t_fdf *fdf, t_point *points)
 {

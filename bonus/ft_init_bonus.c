@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_init.c                                          :+:      :+:    :+:   */
+/*   ft_init_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imouhtad <imouhtad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/14 16:03:36 by imouhtad          #+#    #+#             */
-/*   Updated: 2025/02/20 01:36:09 by imouhtad         ###   ########.fr       */
+/*   Created: 2025/02/19 20:41:01 by imouhtad          #+#    #+#             */
+/*   Updated: 2025/02/20 01:39:24 by imouhtad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
-#include "error_message.h"
+#include "fdf_bonus.h"
+#include "../error_message.h"
 
 void	check_file(t_fdf *fdf)
 {
@@ -45,7 +45,8 @@ void	init_map(t_fdf *fdf, char *file_path)
 	fdf->y_move = 300;
 	fdf->z_move = 1;
 	fdf->points = NULL;
-	fdf->bonus = 0;
+	fdf->bonus = 1;
+	fdf->signe = 0;
 	check_file(fdf);
 }
 

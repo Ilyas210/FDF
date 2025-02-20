@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parse.c                                            :+:      :+:    :+:   */
+/*   parse_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imouhtad <imouhtad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 16:59:05 by imouhtad          #+#    #+#             */
-/*   Updated: 2025/02/20 01:36:32 by imouhtad         ###   ########.fr       */
+/*   Updated: 2025/02/20 01:39:41 by imouhtad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
-#include "error_message.h"
+#include "fdf_bonus.h"
+#include "../error_message.h"
 
 int	is_number(char *str)
 {

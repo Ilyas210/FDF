@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   main_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imouhtad <imouhtad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 17:19:09 by imouhtad          #+#    #+#             */
-/*   Updated: 2025/02/20 01:32:44 by imouhtad         ###   ########.fr       */
+/*   Updated: 2025/02/20 01:33:43 by imouhtad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
-#include "error_message.h"
+#include "fdf_bonus.h"
+#include "../error_message.h"
 
 void	ft_error(char *str)
 {
@@ -83,6 +83,9 @@ int	main(int ac, char **av)
 		return (free(fdf), ft_error(ERR_CONV_TO_ARR), 1);
 	initiate_mlx(fdf);
 	draw_map(fdf, fdf->points);
+	mlx_mouse_hook(fdf->mlx.mlx_ptr, mouse_hook, fdf);
+	mlx_loop_hook(fdf->mlx.mlx_ptr, loop_hook, fdf);
+	mlx_scroll_hook(fdf->mlx.mlx_ptr, scroll_hook, fdf);
 	mlx_key_hook(fdf->mlx.mlx_ptr, key_hook, fdf);
 	mlx_loop(fdf->mlx.mlx_ptr);
 	mlx_terminate(fdf->mlx.mlx_ptr);

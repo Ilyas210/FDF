@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.h                                              :+:      :+:    :+:   */
+/*   fdf_bonus.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imouhtad <imouhtad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 17:21:46 by imouhtad          #+#    #+#             */
-/*   Updated: 2025/02/20 01:51:50 by imouhtad         ###   ########.fr       */
+/*   Updated: 2025/02/20 01:52:06 by imouhtad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FDF_H
-# define FDF_H
+#ifndef FDF_BONUS_H
+# define FDF_BONUS_H
 # include <unistd.h>
-# include "MLX42.h"
+# include "../MLX42.h"
 # include <math.h>
 # include <limits.h>
-# include "libft/libft.h"
+# include "../libft/libft.h"
 # include <fcntl.h>
 
 typedef struct s_point
@@ -72,5 +72,9 @@ void			free_fdf(t_fdf *fdf);
 void			mlx_clear(t_fdf *fdf);
 t_point			**fill_points(t_fdf *fdf);
 void			chech_open_file(t_fdf *fdf, int *fd);
+void			scroll_hook(double xdelta, double ydelta, void *param);
+void			mouse_hook(mouse_key_t button, action_t action,
+					modifier_key_t mods, void *param);
+void			loop_hook(void *param);
 
 #endif
